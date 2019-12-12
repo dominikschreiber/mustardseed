@@ -1,0 +1,65 @@
+.section {
+	box-sizing: border-box;
+	display: flex;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	flex-direction: column;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+	background-size: 100%, cover;
+	background-position: center, center;
+}
+
+@media screen and (min-width: 768px) {
+	.section {
+		padding-left: calc((100% - 768px + 2rem) / 2);
+		padding-right: calc((100% - 768px + 2rem) / 2);
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.section {
+		padding-left: calc((100% - 1024px + 2rem) / 2);
+		padding-right: calc((100% - 1024px + 2rem) / 2);
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.section {
+		padding-left: calc((100% - 1200px + 2rem) / 2);
+		padding-right: calc((100% - 1200px + 2rem) / 2);
+	}
+}
+
+.section--large {
+	padding-top: 4rem;
+	padding-bottom: 4rem;
+}
+
+.section--stretch {
+	height: 80vh;
+}
+
+.section--overlaybackground {
+	color: #ebebeb;
+}
+
+.section--overlaybackground a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.section--overlaybackground .button {
+	color: #ebebeb;
+	border-color: #ebebeb;
+}
+
+.section--overlaybackground .button:hover {
+	background-color: #090a0a99;
+}
+
+.section--overlaybackground .button:active {
+	background-color: #2896e2;
+	border-color: #1a7bbd;
+}

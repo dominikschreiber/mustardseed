@@ -25,8 +25,9 @@ website.
 4. [Iframe](#iframe)
 5. [Page](#page)
 6. [Pageheader](#pageheader)
-7. [Text](#text)
-8. [View](#view)
+7. [Section](#section)
+8. [Text](#text)
+9. [View](#view)
 
 For specific CSS (e.g. for a single `.section`) you are encouraged to add
 classes to identify the elements and styles to give them a special look:
@@ -119,21 +120,49 @@ The `.pageheader` is visible at the top of all `.view` elements (see
 [routing](#routing)).
 
 ```html
-<!DOCTYPE html>
-<html>
-	<head>
-    <title>My Website</titleY>
-		<link rel="stylesheet" href="styles/pageheader.css" />
-		<link rel="stylesheet" href="styles/view.css" />
-	</head>
-	<body>
-		<header class="pageheader">
-			<a href="#!/"><img src="logo.svg" alt="my website"/></a>
-		</header>
-		<section class="view" id="!/" data-title="Home"></section>
-		<script src="scripts/routing.js"></script>
-	</body>
-</html>
+<link rel="stylesheet" href="styles/pageheader.css" />
+<link rel="stylesheet" href="styles/view.css" />
+<header class="pageheader">
+	<a href="#!/"><img src="logo.svg" alt="my website"/></a>
+</header>
+<section class="view" id="!/" data-title="Home"></section>
+```
+
+### Section
+
+A `.view` is often split into multiple `.section`s. These create space for
+different topics. Height can either depend on content (with potentially large
+paddings) or the min-height can be viewport-based.
+
+```html
+<link rel="stylesheet" href="styles/button.css" />
+<link rel="stylesheet" href="styles/pageheader.css" />
+<link rel="stylesheet" href="styles/section.css" />
+<link rel="stylesheet" href="styles/view.css" />
+<style>
+	.section--mysection {
+		background-image: linear-gradient(#000b 0, #000b 100%),
+			url(assets/mybackground.png);
+	}
+</style>
+<header class="pageheader"></header>
+<section class="view" id="!/" data-title="Home">
+	<article class="section">
+		<h2>height based on content<h2>
+	</article>
+	<article class="section section--large">
+		<h2>height based on content</h2>
+		<p>has larger paddings</p>
+	</article>
+	<article class="section section--stretch">
+		<h2>minimum 80vh high</h2>
+	</article>
+	<article class="section section--overlaybackground section--mysection">
+		<h2>custom background-image</h2>
+		<p>with dark semi-transparent overlay</p>
+		<button type="button" class="button button--outline">an outline-button</button>
+	</article>
+</section>
 ```
 
 ### Text
