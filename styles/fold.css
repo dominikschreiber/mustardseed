@@ -1,0 +1,9 @@
+.fold,
+.fold:not(:checked) ~ .fold__show,
+.fold:checked ~ .fold__hide {
+	position: absolute;
+	top: -99999px;
+	left: -99999px;
+	width: 0;
+	height: 0;
+}

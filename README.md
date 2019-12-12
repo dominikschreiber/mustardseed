@@ -45,3 +45,26 @@ others will be hidden.
 	</body>
 </html>
 ```
+
+## fold
+
+A `.fold` is a technique to uncover content on demand. Mustardseed realizes that
+with a hidden checkbox that is triggered by a connected label. Every
+`.fold__show` sibling of the `.fold` will initially be hidden and only shown
+when the fold is checked, `.fold__hide` will be initially visible and hidden
+when the fold is checked.
+
+```html
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="styles/fold.css" />
+	</head>
+	<body>
+		<p>above the fold</p>
+		<input type="checkbox" id="myfold" class="fold" />
+		<label for="myfold" class="fold__hide">unfold</label>
+		<p class="fold__show">below the fold</p>
+	</body>
+</html>
+```
