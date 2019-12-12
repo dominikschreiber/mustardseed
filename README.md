@@ -19,10 +19,12 @@ website.
 
 ## Components
 
-1. [Fold](#fold)
-2. [Grid](#grid)
-3. [Pageheader](#pageheader)
-4. [View](#view)
+1. [Button](#button)
+2. [Fold](#fold)
+3. [Grid](#grid)
+4. [Page](#page)
+5. [Pageheader](#pageheader)
+6. [View](#view)
 
 For specific CSS (e.g. for a single `.section`) you are encouraged to add
 classes to identify the elements and styles to give them a special look:
@@ -85,6 +87,16 @@ stacked.
 	<article class="grid__item--1"><!-- 1 column --></article>
 	<article class="grid__item--4"><!-- 4 columns, wraps --></article>
 </section>
+```
+
+### Page
+
+The `.page` is a (more than) minimal reset on the `body` that sets `margin:0`
+and a `font-family`:
+
+```html
+<link rel="stylesheet" href="styles/page.css" />
+<body class="page"></body>
 ```
 
 ### Pageheader
