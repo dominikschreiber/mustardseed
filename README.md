@@ -79,6 +79,7 @@ The `.pageheader` is visible on all `.view` elements (see [routing](#routing)).
 <!DOCTYPE html>
 <html>
 	<head>
+    <title>My Website</titleY>
 		<link rel="stylesheet" href="styles/pageheader.css" />
 		<link rel="stylesheet" href="styles/view.css" />
 	</head>
@@ -86,8 +87,33 @@ The `.pageheader` is visible on all `.view` elements (see [routing](#routing)).
 		<header class="pageheader">
 			<a href="#!/"><img src="logo.svg" alt="my website"/></a>
 		</header>
-		<section class="view" id="!/"></section>
+		<section class="view" id="!/" data-title="Home"></section>
 		<script src="scripts/routing.js"></script>
+	</body>
+</html>
+```
+
+## grid
+
+The `.grid` offers a 12-column grid implemented with the css grid.
+`.grid__item--${n}` will span `n` columns of the grid. Columns > 12 wrap. In
+small viewports ("S" form factor, mobile devices), the grid items will be
+stacked.
+
+```html
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="styles/grid.css" />
+	</head>
+	<body>
+		<section class="view grid" id="!/" data-title="Home">
+			<article class="grid__item--3"><!-- 3 columns --></article>
+			<article class="grid__item--6"><!-- 6 columns --></article>
+			<article class="grid__item--2"><!-- 2 columns --></article>
+			<article class="grid__item--1"><!-- 1 column --></article>
+			<article class="grid__item--4"><!-- 4 columns, wraps --></article>
+		</section>
 	</body>
 </html>
 ```
