@@ -1,0 +1,19 @@
+.pageheader {
+	position: absolute;
+	top: 0;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	width: 100%;
+	height: 6rem;
+	padding-left: 2rem;
+	padding-right: 2rem;
+	box-shadow: 0 0 0.125rem #0003, 0 0 4rem #0001;
+}
+
+@media screen and (min-width: 1024px) {
+	.pageheader {
+		padding-left: 4rem;
+		padding-right: 4rem;
+	}
+}

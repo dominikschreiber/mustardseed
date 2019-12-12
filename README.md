@@ -32,9 +32,11 @@ others will be hidden.
 <html>
 	<head>
 		<title>Mustardseed</title>
+		<link rel="stylesheet" href="styles/pageheader.css" />
 		<link rel="stylesheet" href="styles/view.css" />
 	</head>
 	<body>
+		<header class="pageheader"></header>
 		<section class="view" id="!/home" data-title="Home">
 			<a href="#!/about">about</a>
 		</section>
@@ -65,6 +67,27 @@ when the fold is checked.
 		<input type="checkbox" id="myfold" class="fold" />
 		<label for="myfold" class="fold__hide">unfold</label>
 		<p class="fold__show">below the fold</p>
+	</body>
+</html>
+```
+
+## pageheader
+
+The `.pageheader` is visible on all `.view` elements (see [routing](#routing)).
+
+```html
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="styles/pageheader.css" />
+		<link rel="stylesheet" href="styles/view.css" />
+	</head>
+	<body>
+		<header class="pageheader">
+			<a href="#!/"><img src="logo.svg" alt="my website"/></a>
+		</header>
+		<section class="view" id="!/"></section>
+		<script src="scripts/routing.js"></script>
 	</body>
 </html>
 ```
