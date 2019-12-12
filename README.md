@@ -25,7 +25,8 @@ website.
 4. [Iframe](#iframe)
 5. [Page](#page)
 6. [Pageheader](#pageheader)
-7. [View](#view)
+7. [Text](#text)
+8. [View](#view)
 
 For specific CSS (e.g. for a single `.section`) you are encouraged to add
 classes to identify the elements and styles to give them a special look:
@@ -133,6 +134,16 @@ The `.pageheader` is visible at the top of all `.view` elements (see
 		<script src="scripts/routing.js"></script>
 	</body>
 </html>
+```
+
+### Text
+
+Makes content copy readable with an eye-pleasing `line-height`, `margin` and
+`max-width`.
+
+```html
+<link rel="stylesheet" href="styles/text.css" />
+<p class="text">Lorem ipsum dolor sit amet</p>
 ```
 
 ### View
