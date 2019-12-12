@@ -24,6 +24,35 @@ website.
 3. [Pageheader](#pageheader)
 4. [View](#view)
 
+For specific CSS (e.g. for a single `.section`) you are encouraged to add
+classes to identify the elements and styles to give them a special look:
+
+```html
+<link rel="stylesheet" href="styles/section.css" />
+<style>
+	.section--mysection {
+		background-color: #c0ffee;
+	}
+</style>
+<article class="section section--mysection"></article>
+```
+
+### Button
+
+A `.button` styles an element to appear as a button. Comes with alternatives:
+
+- `.button--outline` only visualizes a border
+- `.button--large` makes it a tad larger.
+
+```html
+<link rel="stylesheet" href="styles/button.css" />
+<button type="button" class="button">A Button</button><br />
+<a href="#!/" class="button button--outline">An outline Button</a><br />
+<label for="myfold" class="button button--large fold__hide">
+	A large<br /><span class="button__subtitle">Button</span>
+</label>
+```
+
 ### Fold
 
 A `.fold` is a technique to uncover content on demand. Mustardseed realizes that
@@ -33,18 +62,11 @@ when the fold is checked, `.fold__hide` will be initially visible and hidden
 when the fold is checked.
 
 ```html
-<!DOCTYPE html>
-<html>
-	<head>
-		<link rel="stylesheet" href="styles/fold.css" />
-	</head>
-	<body>
-		<p>above the fold</p>
-		<input type="checkbox" id="myfold" class="fold" />
-		<label for="myfold" class="fold__hide">unfold</label>
-		<p class="fold__show">below the fold</p>
-	</body>
-</html>
+<link rel="stylesheet" href="styles/fold.css" />
+<p>above the fold</p>
+<input type="checkbox" id="myfold" class="fold" />
+<label for="myfold" class="fold__hide">unfold</label>
+<p class="fold__show">below the fold</p>
 ```
 
 ### Grid
@@ -55,21 +77,14 @@ small viewports ("S" form factor, mobile devices), the grid items will be
 stacked.
 
 ```html
-<!DOCTYPE html>
-<html>
-	<head>
-		<link rel="stylesheet" href="styles/grid.css" />
-	</head>
-	<body>
-		<section class="view grid" id="!/" data-title="Home">
-			<article class="grid__item--3"><!-- 3 columns --></article>
-			<article class="grid__item--6"><!-- 6 columns --></article>
-			<article class="grid__item--2"><!-- 2 columns --></article>
-			<article class="grid__item--1"><!-- 1 column --></article>
-			<article class="grid__item--4"><!-- 4 columns, wraps --></article>
-		</section>
-	</body>
-</html>
+<link rel="stylesheet" href="styles/grid.css" />
+<section class="view grid" id="!/" data-title="Home">
+	<article class="grid__item--3"><!-- 3 columns --></article>
+	<article class="grid__item--6"><!-- 6 columns --></article>
+	<article class="grid__item--2"><!-- 2 columns --></article>
+	<article class="grid__item--1"><!-- 1 column --></article>
+	<article class="grid__item--4"><!-- 4 columns, wraps --></article>
+</section>
 ```
 
 ### Pageheader
@@ -97,7 +112,7 @@ The `.pageheader` is visible at the top of all `.view` elements (see
 
 ### View
 
-See [routing](#routing).
+See [Routing](#routing).
 
 ## Utilities
 
