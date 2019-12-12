@@ -11,7 +11,8 @@
 		"lint:css": "stylelint 'styles/**/*.css'",
 		"lint:js": "eslint 'scripts/**/*.js'",
 		"lint": "npm-run-all -p --aggregate-output lint:*",
-		"test": "make test"
+		"test": "make test",
+		"precommit": "npm-run-all -p --aggregate-output format lint"
 	},
 	"repository": {
 		"type": "git",
