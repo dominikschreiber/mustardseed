@@ -1,0 +1,10 @@
+.view {
+	display: none;
+	padding-top: 6rem;
+	min-height: 100vh;
+	flex-direction: column;
+}
+
+.view:target {
+	display: flex;
+}
