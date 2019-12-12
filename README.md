@@ -22,9 +22,10 @@ website.
 1. [Button](#button)
 2. [Fold](#fold)
 3. [Grid](#grid)
-4. [Page](#page)
-5. [Pageheader](#pageheader)
-6. [View](#view)
+4. [Iframe](#iframe)
+5. [Page](#page)
+6. [Pageheader](#pageheader)
+7. [View](#view)
 
 For specific CSS (e.g. for a single `.section`) you are encouraged to add
 classes to identify the elements and styles to give them a special look:
@@ -87,6 +88,18 @@ stacked.
 	<article class="grid__item--1"><!-- 1 column --></article>
 	<article class="grid__item--4"><!-- 4 columns, wraps --></article>
 </section>
+```
+
+### Iframe
+
+The `.iframe` styles an `<iframe>` so that it spans the whole screen minus the
+[pageheader](#pageheader):
+
+```html
+<link rel="stylesheet" href="styles/iframe.css" />
+<link rel="stylesheet" href="styles/pageheader.css" />
+<header class="pageheader"></header>
+<iframe class="iframe" src="https://my.embedded.content"></iframe>
 ```
 
 ### Page
