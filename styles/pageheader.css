@@ -11,9 +11,37 @@
 	box-shadow: 0 0 0.125rem #0003, 0 0 4rem #0001;
 }
 
+.pageheader img {
+	max-height: 4rem;
+}
+
+.pageheader--sectionaligned {
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+	.pageheader--sectionaligned {
+		padding-left: calc((100% - 768px + 2rem) / 2);
+		padding-right: calc((100% - 768px + 2rem) / 2);
+	}
+}
+
 @media screen and (min-width: 1024px) {
 	.pageheader {
 		padding-left: 4rem;
 		padding-right: 4rem;
+	}
+
+	.pageheader--sectionaligned {
+		padding-left: calc((100% - 1024px + 2rem) / 2);
+		padding-right: calc((100% - 1024px + 2rem) / 2);
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.pageheader--sectionaligned {
+		padding-left: calc((100% - 1200px + 2rem) / 2);
+		padding-right: calc((100% - 1200px + 2rem) / 2);
 	}
 }
