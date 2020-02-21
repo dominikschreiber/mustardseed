@@ -9,10 +9,19 @@
 	padding-left: 2rem;
 	padding-right: 2rem;
 	box-shadow: 0 0 0.125rem #0003, 0 0 4rem #0001;
+	box-sizing: border-box;
 }
 
 .pageheader img {
 	max-height: 4rem;
+}
+
+.pageheader a {
+	text-decoration: none;
+}
+
+.pageheader * + * {
+	margin-left: 1rem;
 }
 
 .pageheader--sectionaligned {
@@ -31,6 +40,10 @@
 	.pageheader {
 		padding-left: 4rem;
 		padding-right: 4rem;
+	}
+
+	.pageheader * + * {
+		margin-left: 2rem;
 	}
 
 	.pageheader--sectionaligned {

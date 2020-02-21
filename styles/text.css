@@ -1,6 +1,46 @@
-.text {
-	margin: 0 0 1rem;
-	max-width: 30rem;
-	line-height: 1.5;
-	text-align: left;
+.text h1 {
+	font-size: 2rem;
+	font-weight: bold;
+}
+
+.text h2 {
+	font-size: 1.618rem;
+	font-weight: bold;
+}
+
+.text h3 {
+	font-size: 1.618rem;
+	color: #666;
+	font-weight: bold;
+}
+
+.text p,
+.text ul,
+.text ol,
+.text blockquote {
+	width: 30rem;
+	line-height: 1.4;
+	text-align: justify;
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	hyphens: auto;
+	box-sizing: border-box;
+}
+
+.text blockquote {
+	margin-top: 0;
+	padding: .5rem 0 .5rem 1rem;
+	color: #456;
+	background-image: linear-gradient(0deg, #456 0, #456 100%);
+	background-position: left;
+	background-repeat: repeat-y;
+	background-size: .125rem;
+}
+
+.text blockquote * {
+	max-width: 100%;
+}
+
+.text blockquote :last-child {
+	margin-bottom: 0;
 }
